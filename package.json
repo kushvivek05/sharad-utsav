@@ -1,0 +1,16 @@
+
+{
+  "name": "sharad-utsav",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Event booking platform for Sharad Utsav 2026",
+  "workspaces": [
+    "apps/web",
+    "apps/api",
+    "packages/contracts"
+  ],
+  "scripts": {
+    "dev:web": "npm run dev --workspace=@sharad-utsav/web",
+    "dev:api": "npm run dev --workspace=@sharad-utsav/api"
+  }
+}
