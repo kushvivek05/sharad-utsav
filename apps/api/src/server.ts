@@ -1,19 +1,15 @@
+import app from './app.js';
+import { env } from './config/env.js';
+import { closeBookingStore } from './services/booking-store.js';
 
-import express from 'express';
-import healthRouter from './routes/health.js';
-
-const app = express();
-const PORT = Number(process.env.PORT) || 4000;
-
-app.disable('x-powered-by');
-
-app.use(express.json({ limit: '100kb' }));
-
-app.use('/api/v1', healthRouter);
+const PORT = env.port;
 
 const server = app.listen(PORT, () => {
   console.log(`Sharad Utsav API running on port ${PORT}`);
 });
+server.requestTimeout = 30_000;
+server.headersTimeout = 10_000;
+server.keepAliveTimeout = 5_000;
 
 function shutdown(signal: string) {
   console.log(`${signal} received. Shutting down API...`);
@@ -24,8 +20,10 @@ function shutdown(signal: string) {
       process.exitCode = 1;
       return;
     }
-
-    process.exitCode = 0;
+    void closeBookingStore().then(() => { process.exitCode = 0; }).catch((closeError) => {
+      console.error('Error closing booking storage:', closeError);
+      process.exitCode = 1;
+    });
   });
 }
 

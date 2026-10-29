@@ -11,9 +11,7 @@ export default function SiteHeader() {
           <span>Sharad</span> Utsav
         </a>
 
-        <span className="site-header__location">
-          Allen, Texas
-        </span>
+        <span className="site-header__location">Festival booking</span>
       </div>
     </header>
   );

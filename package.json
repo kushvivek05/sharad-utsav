@@ -6,8 +6,7 @@
   "description": "Event booking platform for Sharad Utsav 2026",
   "workspaces": [
     "apps/web",
-    "apps/api",
-    "packages/contracts"
+    "apps/api"
   ],
   "scripts": {
     "dev:web": "npm run dev --workspace=@sharad-utsav/web",

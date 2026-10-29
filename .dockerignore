@@ -1,0 +1,14 @@
+.git
+.next
+**/.next
+node_modules
+**/node_modules
+dist
+**/dist
+coverage
+.env
+.env.*
+!.env.example
+**/data/booking-store.json
+**/data/*.sqlite*
+npm-debug.log*

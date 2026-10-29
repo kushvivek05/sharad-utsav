@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "event": {
+    "slug": "sharad-utsav-2026",
+    "name": "Sharad Utsav 2026",
+    "currency": "USD",
+    "venue": {
+      "name": "Radha Krishna Temple",
+      "address": null,
+      "city": "Allen",
+      "region": "Texas",
+      "country": "United States"
+    },
+    "schedule": {
+      "timeZone": "America/Chicago",
+      "startDate": "2026-11-10",
+      "endDate": "2026-11-14",
+      "dailyTimings": [
+        { "date": "2026-11-10", "startTime": null, "endTime": null },
+        { "date": "2026-11-11", "startTime": null, "endTime": null },
+        { "date": "2026-11-12", "startTime": null, "endTime": null },
+        { "date": "2026-11-13", "startTime": null, "endTime": null },
+        { "date": "2026-11-14", "startTime": null, "endTime": null }
+      ]
+    }
+  },
+  "ageRules": {
+    "freeBelow": 5,
+    "child": { "minimum": 5, "maximum": 11 },
+    "adultMinimum": 12,
+    "bookingContactMinimum": 18
+  },
+  "passes": [
+    { "code": "DAY_ADULT", "name": "Day Pass — Adult", "audience": "adult", "priceCents": 1500, "initialStock": 21, "dayRule": "selected-days", "chargeRule": "per-person-day" },
+    { "code": "DAY_CHILD", "name": "Day Pass — Child", "audience": "child", "priceCents": 800, "initialStock": 21, "dayRule": "selected-days", "chargeRule": "per-person-day" },
+    { "code": "ALL_DAY_ADULT", "name": "All-Day Pass — Adult", "audience": "adult", "priceCents": 6000, "initialStock": 0, "dayRule": "all-event-days", "chargeRule": "per-person" },
+    { "code": "ALL_DAY_CHILD", "name": "All-Day Pass — Child", "audience": "child", "priceCents": 3000, "initialStock": 140, "dayRule": "all-event-days", "chargeRule": "per-person" },
+    { "code": "FAMILY_PASS", "name": "Family Pass", "audience": "family", "priceCents": 4000, "initialStock": 95, "dayRule": "single-day", "chargeRule": "per-family", "familyComposition": { "adultCount": 2, "childCount": 2 } }
+  ],
+  "extras": [
+    { "code": "DANDIYA_STICKS", "name": "Dandiya Sticks", "description": "Souvenir pair", "priceCents": 500, "initialStock": 900, "selectionRule": "quantity", "unitLabel": "pair" },
+    { "code": "DINNER_PLATE", "name": "Dinner Plate", "description": "One plate for a guest on a selected date", "priceCents": 1200, "initialStock": 1700, "selectionRule": "per-day", "unitLabel": "plate", "availableDates": "all-event-days", "maximumPerAttendee": true },
+    { "code": "GARBA_WORKSHOP", "name": "Garba Workshop", "description": "Workshop session", "priceCents": 2000, "initialStock": 2, "selectionRule": "per-session", "unitLabel": "person", "availableDates": ["2026-11-11", "2026-11-13"], "maximumPerAttendee": true }
+  ],
+  "promoCodes": [
+    { "code": "SEVA10", "status": "active", "discountRule": "percentage", "value": 10, "message": "10% off your booking." },
+    { "code": "FLAT20", "status": "active", "discountRule": "fixed-cents", "value": 2000, "message": "$20 off your booking." },
+    { "code": "KIDSFREE", "status": "active", "discountRule": "child-tickets-free", "value": 0, "message": "Child ticket charges removed." },
+    { "code": "EXPIRED5", "status": "expired", "discountRule": "fixed-cents", "value": 500, "message": "This promo code has expired." },
+    { "code": "MAXEDOUT", "status": "maxed-out", "discountRule": "fixed-cents", "value": 0, "message": "This promo code has reached its usage limit." }
+  ]
+}
